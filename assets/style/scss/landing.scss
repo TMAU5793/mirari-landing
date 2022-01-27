@@ -1,0 +1,222 @@
+$ff-bold: 'FCIconicBold';
+$ff-regular: 'FCIconicRegular';
+$c-sky: #2dc5c9;
+$c-gray: #575757;
+html,
+body {
+    font-family: $ff-regular;
+    font-size: 1.25rem;
+}
+
+img {
+    width: 100%;
+}
+
+.ff-bold {
+    font-family: $ff-bold;
+}
+
+.c-sky {
+    color: $c-sky;
+}
+
+.c-gray {
+    color: $c-gray;
+}
+
+.form-register {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .input-group {
+        .input-group-text {
+            background: transparent;
+            padding-right: 0;
+        }
+        .form-control {
+            padding: 4px .75rem;
+            border-left: 0;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        span.text-danger {
+            width: 100%;
+            text-align: left;
+            font-size: 1rem;
+        }
+    }
+}
+
+.sect-2 {
+    .owl-carousel {
+        .owl-dots {
+            margin-top: 0;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.sect-4 {
+    iframe {
+        width: 100%;
+        height: 450px;
+    }
+}
+
+.sect-5 {
+    padding: 1rem 0;
+    .col-img {
+        text-align: right;
+        border-right: 1px solid $c-gray;
+        padding: 2rem 1.5rem;
+        img {
+            max-width: 194px;
+        }
+    }
+    .col-text {
+        p {
+            line-height: 30px;
+        }
+    }
+    .col-social {
+        a {
+            text-decoration: none;
+        }
+        i {
+            color: $c-gray;
+            margin-right: .5rem;
+            &:hover {
+                color: $c-sky;
+            }
+        }
+    }
+}
+
+.btn-mirari-group {
+    a {
+        text-decoration: none;
+    }
+    img {
+        max-width: 200px;
+        margin: 0 1rem;
+    }
+}
+
+.footer {
+    padding: 1rem;
+    background: #f6f6f6;
+    font-size: 1rem;
+}
+
+.btn-mirari {
+    background: rgb(226, 227, 227);
+    background: linear-gradient(0deg, rgba(226, 227, 227, 1) 0%, rgba(246, 246, 246, 1) 100%);
+    border-radius: 50px;
+    color: $c-gray;
+    padding: .5rem 1rem .5rem 4rem;
+    margin: 0 .5rem;
+    width: 200px;
+    display: inline-block;
+    &:hover {
+        color: $c-gray;
+        box-shadow: 0px 0px 0px 4px $c-sky;
+    }
+}
+
+.btn-facebook {
+    position: relative;
+    &::before {
+        content: '';
+        background-image: url('../../images/btn-fb.png');
+        background-size: contain;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 5px 3px 15px #b5b5b5;
+        border-radius: 50px;
+    }
+}
+
+.btn-website {
+    position: relative;
+    &::before {
+        content: '';
+        background-image: url('../../images/btn-web.png');
+        background-size: contain;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        box-shadow: 5px 3px 15px #b5b5b5;
+        border-radius: 50px;
+    }
+}
+
+.btn-register {
+    font-family: $ff-bold;
+    background-color: $c-sky;
+    color: #fff;
+    padding: 2px 1rem;
+    transition: all .3s;
+    display: inline-block;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $c-sky;
+        //border-radius: 10rem;
+        z-index: -2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($c-sky, 15%);
+        transition: all .3s;
+        //border-radius: 10rem;
+        z-index: -1;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+            width: 100%;
+        }
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
