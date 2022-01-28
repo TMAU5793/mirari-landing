@@ -1,0 +1,78 @@
+@mixin media-max($length) {
+    @media (max-width: $length) {
+        @content;
+    }
+}
+
+@include media-max(1366px) {
+    .form-register {
+        padding: 0 1.5rem;
+    }
+}
+
+@include media-max(991px) {
+    .form-register {
+        position: static;
+        transform: none;
+        margin: auto;
+        padding: 2.5rem 1.5rem;
+        .form-head {
+            span {
+                line-height: 25px;
+            }
+            h1 {
+                line-height: 30px;
+                margin-top: .5rem;
+            }
+        }
+    }
+    .sect-5 .col-text p {
+        line-height: 25px;
+    }
+}
+
+@include media-max(767px) {
+    .hide-767 {
+        display: none !important;
+    }
+    .show-767 {
+        display: block !important;
+    }
+}
+
+@include media-max(575px) {
+    h3 {
+        font-size: 1.25rem;
+    }
+    .sect-3 {
+        margin-top: 1.5rem !important;
+        .btn-facebook {
+            margin-bottom: 1rem;
+        }
+    }
+    .sect-4 iframe {
+        height: 320px;
+    }
+    .sect-5 {
+        .col-text p {
+            font-size: 1rem;
+        }
+        .col-md-8 {
+            padding-left: 1rem;
+        }
+        .col-img {
+            padding-right: 0;
+        }
+    }
+    .form-register {
+        padding: 2.5rem .5rem;
+        .form-head {
+            span {
+                font-size: 1.1rem;
+            }
+            h1 {
+                margin-top: .25rem;
+            }
+        }
+    }
+}

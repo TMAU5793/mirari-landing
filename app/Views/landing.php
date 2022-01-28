@@ -6,17 +6,20 @@
 
         <section class="sect-1">
             <div class="row">
-                <div class="col-md-7 p-0">
+                <div class="col-lg-7 col-12 p-0">
                     <img src="<?= site_url('assets/images/sect-1.jpg') ?>" alt="">
                 </div>
-                <div class="col-md-5 position-relative">
+                <div class="col-lg-5 col-12 position-relative">
                     <div class="form-register">
+                        <div class="logo">
+                            <img src="<?= site_url('assets/images/logo-150.png') ?>" alt="">
+                        </div>
                         <div class="form-head mb-3">
                             <span class="d-block">ลงทะเบียนเยี่ยมชมโครงการวันนี้ เพื่อรับสิทธิพิเศษ</span>
                             <h1 class="c-sky ff-bold mb-0 fs-2">ฟรี!! ส่วนลดสูงสุด 1,200,000 บาท</h1>
                             <span>เฉพาะ 1-28 กุมภาพันธ์ นี้เท่านั้น</span>
                         </div>
-                        <form action="<?= site_url('home/register') ?>" method="POST">
+                        <form action="<?= site_url('save') ?>" method="POST">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="far fa-user-circle c-gray"></i></span>
                                 <input type="text" class="form-control" name="txt_name" placeholder="ชื่อ - นามสกุล *" value="<?= set_value('txt_name') ?>">
@@ -56,12 +59,12 @@
 
         <section class="sect-5">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-4 col-5">
                     <div class="col-img">
                         <img src="<?= site_url('assets/images/logo.png') ?>" alt="">
                     </div>
                 </div>
-                <div class="col-md-8 pt-3">
+                <div class="col-md-8 col-sm-8 col-7 pt-3">
                     <div class="col-text">
                         <h3 class="mb-0"><strong>ที่ตั้งโครงการ</strong></h3>
                         <p class="c-gray mb-0">โครงการบ้านมิรารี่ เพชรเกษม - กระทุ่มแบน</p>
@@ -87,6 +90,22 @@
         
         <div class="footer text-center">
             <span>© 2021 Mirari Home All Rights Reserved.</span>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body text-center pt-5">
+                    <span>ลงทะเบียนเยี่ยมชมโครงการ เพื่อรับสิทธิพิเศษ</span>
+                    <div class="c-light-green">
+                        <strong class="ff-bold fs-1 d-block">สำเร็จแล้ว</strong>
+                        <i class="far fa-check-circle display-1"></i>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

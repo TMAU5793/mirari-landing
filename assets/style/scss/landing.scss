@@ -2,6 +2,7 @@ $ff-bold: 'FCIconicBold';
 $ff-regular: 'FCIconicRegular';
 $c-sky: #2dc5c9;
 $c-gray: #575757;
+$c-light-green: #00c730;
 html,
 body {
     font-family: $ff-regular;
@@ -24,6 +25,10 @@ img {
     color: $c-gray;
 }
 
+.c-light-green {
+    color: $c-light-green;
+}
+
 .form-register {
     max-width: 500px;
     width: 100%;
@@ -36,6 +41,7 @@ img {
         .input-group-text {
             background: transparent;
             padding-right: 0;
+            border-radius: 0;
         }
         .form-control {
             padding: 4px .75rem;
@@ -50,6 +56,12 @@ img {
             font-size: 1rem;
         }
     }
+    .logo {
+        margin-bottom: 1rem;
+        img {
+            max-width: 150px;
+        }
+    }
 }
 
 .sect-2 {
@@ -60,6 +72,17 @@ img {
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
+        }
+        .col-text {
+            max-width: 600px;
+            margin: auto;
+            p {
+                line-height: 26px;
+            }
+        }
+        .owl-theme .owl-dots .owl-dot.active span,
+        .owl-theme .owl-dots .owl-dot:hover span {
+            background: $c-sky;
         }
     }
 }
@@ -73,10 +96,15 @@ img {
 
 .sect-5 {
     padding: 1rem 0;
+    .col-md-4 {
+        border-right: 1px solid $c-gray;
+    }
+    .col-md-8 {
+        padding-left: 1.5rem;
+    }
     .col-img {
         text-align: right;
-        border-right: 1px solid $c-gray;
-        padding: 2rem 1.5rem;
+        padding: 2rem 1rem;
         img {
             max-width: 194px;
         }
@@ -176,6 +204,7 @@ img {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    border-radius: 0;
     &:after {
         content: '';
         position: absolute;
@@ -220,3 +249,52 @@ img {
     overflow: hidden;
     z-index: 1;
 }
+
+.hide-767 {
+    display: block !important;
+}
+
+.show-767 {
+    display: none !important;
+}
+
+#successModal {
+    .modal-content {
+        position: relative;
+        .btn-close {
+            position: absolute;
+            z-index: 999;
+            right: 1rem;
+            top: 1rem;
+            width: .5em;
+            height: .5em;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.pagination-list {
+    border-top: 1px solid #000;
+    padding-top: .5rem;
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+    li {
+        margin: 0 5px;
+        padding: 0 .75rem;
+        border: 1px solid #000;
+        &.active {
+            background: #000;
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@import 'response';

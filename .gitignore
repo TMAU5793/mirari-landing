@@ -84,6 +84,8 @@ phpunit
 # Composer
 #-------------------------
 vendor/
+assets/style/.sass-cache
+
 
 #-------------------------
 # IDE / Development Files

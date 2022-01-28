@@ -7,5 +7,12 @@
             items:1,
             autoplay: true
         });
+
+        <?php
+            $register = session()->get('register');
+            if($register){
+        ?>
+            $('#successModal').modal('show');
+        <?php } ?>
     });
 </script>
