@@ -19,7 +19,7 @@
                             <h1 class="c-sky ff-bold mb-0 fs-2">ฟรี!! ส่วนลดสูงสุด 1,200,000 บาท</h1>
                             <span>เฉพาะ 1-28 กุมภาพันธ์ นี้เท่านั้น</span>
                         </div>
-                        <form action="<?= site_url('save') ?>" method="POST">
+                        <form id="frm-register" action="<?= site_url('save') ?>" method="POST">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="far fa-user-circle c-gray"></i></span>
                                 <input type="text" class="form-control" name="txt_name" placeholder="ชื่อ - นามสกุล *" value="<?= set_value('txt_name') ?>">

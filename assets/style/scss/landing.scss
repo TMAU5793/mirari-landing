@@ -74,10 +74,14 @@ img {
             transform: translateX(-50%);
         }
         .col-text {
-            max-width: 600px;
+            max-width: 650px;
             margin: auto;
+            h2 {
+                line-height: 30px;
+            }
             p {
                 line-height: 26px;
+                margin-top: 1rem;
             }
         }
         .owl-theme .owl-dots .owl-dot.active span,
@@ -295,6 +299,10 @@ img {
             }
         }
     }
+}
+
+.cursor-pointer {
+    cursor: pointer
 }
 
 @import 'response';

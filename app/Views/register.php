@@ -2,7 +2,7 @@
 
 <?= $this->section('content') ?>
     
-    <div class="container-fluid mirari-landing mt-5">
+    <div class="container-fluid landing-customer mt-5">
         <div class="container">
             <?php
                 $login = session()->get('logindata');
@@ -23,6 +23,7 @@
                             <th scope="col">เบอร์โทร</th>
                             <th scope="col">อีเมล</th>
                             <th scope="col">วันที่ลงทะเบียน</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,6 +36,7 @@
                                 <td><?= $row['phone'] ?></td>
                                 <td><?= $row['email'] ?></td>
                                 <td><?= $row['created_at'] ?></td>
+                                <td><i class="fas fa-trash-alt text-danger cursor-pointer" title="ลบ" data-id="<?= $row['id'] ?>"></i></td>
                             </tr>
                     <?php } } ?>
                     </tbody>

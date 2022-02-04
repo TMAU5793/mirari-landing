@@ -21,10 +21,16 @@
 
     <link rel="stylesheet" href="<?= base_url('assets/fonts/FCIconic/stylesheet.css'); ?>">
     <link rel="stylesheet" href="<?= base_url('assets/style/css/landing.css'); ?>">
+
+    <!-- Google tag -->
+    <?= $this->include('templates/head-tracking'); ?>    
+
 </head>
 <body>
+    <!-- Google tag -->
+    <?= $this->include('templates/body-tracking'); ?>
 
-    <?= $this->renderSection('content') ?>
+    <?= $this->renderSection('content'); ?>
 
     <!-- jQuery -->
     <script src="<?= base_url('assets/jquery/jquery.min.js'); ?>"></script>
@@ -35,6 +41,9 @@
     <!-- Owlcarousel -->
     <script src="<?= base_url('assets/owlcarousel/owl.carousel.min.js'); ?>"></script>
 
-    <?= $this->include('script') ?>
+    <?= $this->include('script'); ?>
+
+    <!-- Ads event  -->
+    <?= $this->include('templates/ads-event'); ?>
 </body>
 </html>

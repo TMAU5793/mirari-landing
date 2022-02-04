@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->match(['get', 'post'],'customer', 'Home::register');
 $routes->post('save', 'Home::save');
+$routes->post('remove', 'Home::remove');
 $routes->get('logout', 'Home::logout');
 
 /*

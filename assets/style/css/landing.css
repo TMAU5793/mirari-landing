@@ -51,10 +51,13 @@ img {
   left: 50%;
   transform: translateX(-50%); }
 .sect-2 .owl-carousel .col-text {
-  max-width: 600px;
+  max-width: 650px;
   margin: auto; }
+  .sect-2 .owl-carousel .col-text h2 {
+    line-height: 30px; }
   .sect-2 .owl-carousel .col-text p {
-    line-height: 26px; }
+    line-height: 26px;
+    margin-top: 1rem; }
 .sect-2 .owl-carousel .owl-theme .owl-dots .owl-dot.active span,
 .sect-2 .owl-carousel .owl-theme .owl-dots .owl-dot:hover span {
   background: #2dc5c9; }
@@ -221,6 +224,9 @@ img {
       background: #000; }
       .pagination-list li.active a {
         color: #fff; }
+
+.cursor-pointer {
+  cursor: pointer; }
 
 @media (max-width: 1366px) {
   .form-register {

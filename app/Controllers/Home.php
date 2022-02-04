@@ -97,12 +97,29 @@ class Home extends BaseController
                     $data['loginfail'] = 'fail';
                 }
             }else{
-                $data['validation'] = $this->validator;                
+                $data['validation'] = $this->validator;
             }
             return view('register',$data);
         }else{
             return view('register');
         }        
+    }
+
+    public function remove()
+    {
+        $request = service('request');
+        $model = new LandingModel();
+
+        $post= $request->getPost();
+
+        if($post){
+            $id = $post['id'];
+            $model->where('id', $id)->delete($id);
+            echo TRUE;
+        }else{
+            return redirect()->to('');
+        }
+
     }
 
     public function logout()
