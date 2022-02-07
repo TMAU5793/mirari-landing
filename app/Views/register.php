@@ -38,7 +38,11 @@
                                 <td><?= $row['created_at'] ?></td>
                                 <td><i class="fas fa-trash-alt text-danger cursor-pointer" title="ลบ" data-id="<?= $row['id'] ?>"></i></td>
                             </tr>
-                    <?php } } ?>
+                        <?php } }else{ ?>
+                            <tr>
+                                <td class="text-center" colspan="5">ไม่พบข้อมูล</td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
                 <?php if(isset($pager)){ ?>
