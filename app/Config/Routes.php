@@ -36,6 +36,7 @@ $routes->match(['get', 'post'],'customer', 'Home::register');
 $routes->post('save', 'Home::save');
 $routes->post('remove', 'Home::remove');
 $routes->get('logout', 'Home::logout');
+$routes->get('success', 'Home::success');
 
 /*
  * --------------------------------------------------------------------

@@ -48,12 +48,22 @@ class Home extends BaseController
                     'email' => $post['txt_email']
                 ];
                 $model->save($data);
-                return redirect()->to('')->with('register','success');
+                return redirect()->to('success')->with('register','success');
                 //print_r($model->errors());
             }else{
                 $data['validation'] = $this->validator;
                 echo view('landing',$data);
             }
+        }else{
+            return redirect()->to('');
+        }
+    }
+
+    public function success()
+    {
+        $sess = session()->get('register');
+        if($sess){
+            echo view('success');
         }else{
             return redirect()->to('');
         }
